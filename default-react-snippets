@@ -1,0 +1,73 @@
+{
+	"React Component": {
+	  "prefix": "arc",
+	  "body": [
+		"import React from 'react';",
+		"",
+		"interface ${1}Props {",
+		"\t",
+		"}",
+		"",
+		"export const ${1}: React.FC<${1}Props> = () => {",
+		"\treturn (",
+		"\t\t<>",
+		"\t\t\t$0",
+		"\t\t</>",
+		"\t);",
+		"};",
+		"",
+		
+	  ],
+	  "description": "Default react arrow functional component"
+	},
+
+	"React Memo Component": {
+	  "prefix": "marc",
+	  "body": [
+		"import React from 'react';",
+		"",
+		"interface ${1}Props {",
+		"\t",
+		"}",
+		"",
+		"const ${1}Fc: React.FC<${1}Props> = () => {",
+		"\treturn (",
+		"\t\t<>",
+		"\t\t\t$0",
+		"\t\t</>",
+		"\t);",
+		"};",
+		"",
+		"export const ${1} = React.memo(${1}Fc)"
+		
+	  ],
+	  "description": "React memoized component"
+	},
+
+	"Mobx base store": {
+		"prefix": "mbx",
+		"body": [
+			"import { makeAutoObservable } from 'mobx';",
+			"",
+			"class $1 {",
+			"\tconstructor() {",
+			"\t\tmakeAutoObservable(this);",
+			"\t}",
+			"}",
+			"",
+			"export { $1 };",
+		],
+		"description": "Base mobx store"
+	},
+
+	"useQuery snippet": {
+		"prefix": "uqs",
+		"body": [
+			"const {} = useQuery({",
+			"\tqueryKey: ['asdf'],",
+			"\tqueryFn: async () => {},",
+			"});",
+		],
+		"description": "Base useQuery"
+	},
+}
