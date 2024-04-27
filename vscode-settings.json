@@ -1,0 +1,60 @@
+ {
+  "editor.unicodeHighlight.allowedLocales": {
+    "ru": true
+  },
+  "editor.minimap.size": "fill",
+  "editor.minimap.showSlider": "always",
+  "go.toolsManagement.autoUpdate": true,
+  "cSpell.dictionaries": ["ru"],
+  "cSpell.language": "en,lorem,ru-RU",
+  "cSpell.userWords": [
+    "Counterparty",
+    "dateutil",
+    "DBAPI",
+    "fastapi",
+    "ilike",
+    "jsonable",
+    "pydantic",
+    "sqlalchemy",
+    "sqlmodel",
+    "starlette"
+  ],
+
+  "[javascript][typescript][javascriptreact][typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.jsdoc.generateReturns": true,
+  "typescript.suggest.completeJSDocs": true,
+  "prettier.trailingComma": "none",
+
+
+  // common
+  "editor.guides.bracketPairs": "active",
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "explicit",
+    "source.removeUnusedImports": "explicit"
+  },
+ 
+
+  // python
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off",
+  },
+
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.autoImportCompletions": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview",
+}
