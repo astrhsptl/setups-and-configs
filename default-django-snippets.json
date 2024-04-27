@@ -1,0 +1,112 @@
+{
+	"Model view set": {
+		"scope": "python",
+		"prefix": "mvs",
+		"body": [
+			"from rest_framework.filters import SearchFilter",
+			"from rest_framework.viewsets import ModelViewSet",
+			"from django_filters.rest_framework import DjangoFilterBackend",
+			"from .models import $1",
+			"from .serializers import $1Serializer",
+			"",
+			"",
+			"class $1ViewSet(ModelViewSet):",
+			"\tqueryset = $1.objects.all()",
+			"\tserializer_class = $1ModelSerializer",
+			"\tpagination_class = None",
+			"\tfilter_backends = [SearchFilter, DjangoFilterBackend]",
+			"\tsearch_fields = []",
+			"\ttags = []",
+			"$2",
+		],
+		"description": "Unwrap default model view set"
+	},
+
+	"Simple router": {
+		"scope": "python",
+		"prefix": "dsr",
+		"body": [
+			"from rest_framework.routers import SimpleRouter",
+			"",
+			"router = SimpleRouter()",
+			"",
+			"router.register()",
+			"",
+			"urlpatterns = []",
+			"",
+			"urlpatterns = router.urls",
+			"$2",
+		],
+		"description": "Unwrap simple router"
+	},
+
+	"Default model serializer": {
+		"scope": "python",
+		"prefix": "dms",
+		"body": [
+			"from rest_framework.serializers import ModelSerializer",
+			"",
+			"from .models import $1",
+			"",
+			"",
+			"class $1ModelSerializer(ModelSerializer):",
+			"\tclass Meta:",
+			"\t\tmodel = $1",
+			"\t\tfields = (\"__all__\")",
+			"$2",
+		],
+		"description": "Unwrap default model serializer"
+	},
+
+	"Default model": {
+		"scope": "python",
+		"prefix": "dm",
+		"body": [
+			"from uuid import uuid4",
+			"from django.db import models",
+			"",
+			"",
+			"class $1(models.Model):",
+			"\tid = models.UUIDField(",
+			"\t\tprimary_key=True,",
+			"\t\tdb_index=True,",
+			"\t\tdefault=uuid4,",
+			"\t\teditable=False",
+			"\t)",
+			"",
+			"\tdef __str__(self):",
+			"\t\treturn str()",
+			"$2",
+		],
+		"description": "Unwrap default model"
+	},
+
+	"Default model admin": {
+		"scope": "python",
+		"prefix": "adm",
+		"body": [
+			"from django.contrib import admin",
+			"",
+			"from .models import $1",
+			"",
+			"",
+			"class $1Admin(admin.ModelAdmin):",
+			"\tfields = (",
+			"\t\t\"id\",",
+			"\t)",
+			"\tlist_display = (",
+			"\t\t\"id\",",
+			"\t)",
+			"\tsearch_fields = (",
+			"\t\t\"id\",",
+			"\t)",
+			"\treadonly_fields = (",
+			"\t\t\"id\",",
+			"\t)",
+			"",
+			"admin.site.register($1, $1Admin)",
+			"$2"
+		],
+		"description": "Unwrap default admin model"
+	},
+}
