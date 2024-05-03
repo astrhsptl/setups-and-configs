@@ -1,6 +1,6 @@
 {
 	"Vue base component": {
-		"prefix": "vbo",
+		"prefix": "vobase",
 		"body": [
 		  	"<script lang=\"ts\">",
 		 	"export default {",
@@ -23,7 +23,7 @@
 		"description": "Base vue component"
 	},
 	"Vue TS base component": {
-		"prefix": "vbot",
+		"prefix": "vcbase",
 		"body": [
 			"<script lang=\"ts\">",
 			"import { defineComponent } from 'vue';",
