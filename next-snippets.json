@@ -1,0 +1,75 @@
+{
+	"Default Next.js Page": {
+		"prefix": "npage",
+		"body": [
+			"import { ReactNode } from 'react';",
+			"",
+			"interface $1Props {",
+			"\nchildren: ReactNode;",
+			"}",
+			"",
+			"export default async funtion $1Page({ children }: $1Props) => {",
+			"  return <>{ children }</>;",
+			"}",
+		],
+		"description": "Default Next.js Page"
+	},
+
+	"Default Next.js Server Component": {
+		"prefix": "nserver",
+		"body": [
+			"interface $1Props {}",
+			"export const $1 = async ({}: $1Props) => {",
+			"  return <></>;",
+			"}",
+		],
+		"description": "Default Next.js Server Component"
+	},
+
+	"Default Next.js Client Component": {
+		"prefix": "nclient",
+		"body": [
+			"interface $1Props {}",
+			"export const $1 = ({}: $1Props) => {",
+			"  return <></>;",
+			"}",
+		],
+		"description": "Default Next.js Client Component"
+	},
+
+
+	"Default Next.js Template": {
+		"prefix": "ntemp",
+		"body": [
+			"import { ReactNode } from 'react';",
+			"",
+			"interface $1Props {",
+			"\nchildren: ReactNode;",
+			"}",
+			"",
+			"export default async function $1Template({ children }: $1Props) {",
+			"\nreturn <>{children}</>;",
+			"}",
+		],
+		"description": "Default Next.js template"
+	},
+
+	"Default Next.js layout": {
+		"prefix": "nlay",
+		"body": [
+			"interface $1LayoutProps {",
+			"\nchildren: React.ReactNode;",
+			"}",
+			"export default async function $1Layout({ children }: $1LayoutProps) {",
+			"\nreturn (",
+			"\n\n<html lang='en'>",
+			"\n\n\n<body>",
+			"\n\n\n\n<main>{children}</main>",
+			"\n\n\n</body>",
+			"\n\n</html>",
+			"\n);",
+			"}",
+		],
+		"description": "Default Next.js template"
+	}
+}
